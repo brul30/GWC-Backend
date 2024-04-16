@@ -1,6 +1,6 @@
 # GWC-Backend
 
-Welcome to the **AI PELS (name subjet to change)** project! Follow these steps to set up your Python development environment and run the project locally.
+Welcome to the **Backend Code for GWC** project! Follow these steps to set up your Python development environment and run the project locally.
 
 ## Prerequisites
 
