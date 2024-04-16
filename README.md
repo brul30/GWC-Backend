@@ -11,8 +11,8 @@ Welcome to the **Backend Code for GWC** project! Follow these steps to set up yo
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/brul30/AI_PELS.git
-   cd AI_PELS
+   git clone https://github.com/brul30/GWC-Backend.git 
+   cd GWC-BACKEND
    ```
 
 To install packages and run various command shortcuts, we use [rav](https://github.com/jmitchel3/rav). Open `rav.yaml` to see the various commands available if you prefer to not use `rav`.
