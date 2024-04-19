@@ -47,17 +47,21 @@ def getNotes(request):
     serializer = ProfileSerializer(profiles, many=True)
     return Response(serializer.data)
 
+
+
     
 @api_view(['POST'])
 def addNotes(request):
-    user_id = request.data.get('user_id')
+    print("data received")
+#    user_id = request.data.json('user_id')
     course_title = request.data.get('course_title')
-    notes_pdf = request.data.get('notes_pdf')
+# notes_pdf = request.FILES.get('notes_pdf')
     instructor = request.data.get('instructor')
     semester = request.data.get('semester')
     year= request.data.get('year')
+   # notes_description = request.data.get('notes_description')
 
-    if not all([user_id, course_title, notes_pdf,instructor,semester,year]):
+    if not all([course_title,instructor,semester,year]):
         return Response({"message": "Missing data"}, status=status.HTTP_400_BAD_REQUEST)
 
     serializer = ProfileSerializer(data=request.data)

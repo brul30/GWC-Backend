@@ -15,6 +15,7 @@ class Profile(models.Model):
     #semester
     semester = models.CharField(max_length=255, null=True, blank=True)
     year = models.IntegerField(null=True, blank=True)
-
     user = models.ForeignKey(User, max_length=10, on_delete=models.CASCADE, null=True)
+    
+
 
