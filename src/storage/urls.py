@@ -5,4 +5,5 @@ urlpatterns = [
  #   path('',views.get_Data),
     path('addNotes', views.addNotes),
     path('getNotes', views.getNotes),
+    path('getUniqueCourses',views.getUniqueCourses)
 ]

@@ -73,3 +73,16 @@ def addNotes(request):
             return Response({'message': str(e)}, status=status.HTTP_400_BAD_REQUEST)
     else:
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+from django.db.models import Count
+
+@api_view(['GET'])
+def getUniqueCourses(request):
+    # This will give you a distinct set of course titles
+    unique_courses = Profile.objects.values('course_title').annotate(total=Count('course_title')).order_by('course_title')
+    
+    # You might want to return only the course titles in a list, for example
+    course_titles = [course['course_title'] for course in unique_courses if course['course_title'] is not None]
+    
+    return Response(course_titles)
